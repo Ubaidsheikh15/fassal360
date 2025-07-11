@@ -27,6 +27,7 @@ import PreLoader from "../components/PreLoader";
 import Certifications from "../views/Certifications";
 import certifications from "../utils/certifications";
 import WaterMark from "../components/WaterMark";
+import EmailPopup from "../utils/EmailPopup";
 
 const ViewElement = ({ children, id }) => (
   <div id={id} className="view-element">
@@ -86,6 +87,7 @@ export default function Home() {
         </ViewElement> */}
 
         <WaterMark />
+        <EmailPopup />
       </ParallaxProvider>
     </>
   );
