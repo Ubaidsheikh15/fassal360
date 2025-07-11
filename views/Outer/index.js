@@ -30,11 +30,11 @@ const Outer = ({ data: {
                         <div className='ai-outer-description'>
                             {desciption}
                         </div>
-                        <div className='ai-outer-contact'>
+                        {/* <div className='ai-outer-contact'>
                             <button onClick={button?.onClick} className='ai-button'>
                                 {button?.label}
                             </button>
-                        </div>
+                        </div> */}
                     </div>
                     <div className='ai-outer-gooery'>
                         <Gooery />

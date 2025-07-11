@@ -5,7 +5,7 @@
 
   .ai-hover-profile {
     border-radius: $defaultBorder;
-    filter: grayscale(1);
+    // filter: grayscale(1);
     mix-blend-mode: multiply;
 
     transition: $allTransitoin3s;
@@ -27,7 +27,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    background-color: $themeColor4;
+    background-color: white;
     border-radius: $defaultBorder;
     transition: $allTransitoin3s;
   }

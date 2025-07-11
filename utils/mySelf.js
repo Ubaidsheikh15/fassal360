@@ -1,43 +1,38 @@
-const mySelf = {
-    heading: 'My Portfolio',
+const fassal360 = {
+    heading: 'Fassal 360 - Empowering Agriculture Through Innovation',
     paragraphs: [
         `
-        Hello! My name is Afzal Imdad, I like creating new things for internet. From a younger age, I have been interested in programming, as a kid most of my time I've spent in inspect element playing with colors and codes generating loops for sending infinite messages, cracking locked screen overflows and many more. so finally at the age of 16 I decided to convert this passion into career.`,
+        Welcome to Fassal 360, your ultimate platform for revolutionizing agriculture with cutting-edge technology. At Fassal 360, we are passionate about transforming the farming landscape by providing farmers with innovative tools, real-time insights, and sustainable solutions to maximize productivity and efficiency.`,
         `
-        It is a way to become more crafty with my ideas and explore the endless possibilities in the world of programming.`,
+        Our mission is to empower farmers with advanced technology to make informed decisions, optimize crop yields, and promote sustainable farming practices. Fassal 360 integrates modern tools like data analytics, IoT, and AI to bring precision agriculture to every farmer, regardless of scale.`,
         `
-        Besides, Programming I'm a passionate photographer and a traveller.
-        A First Pakistani who actually covered most of the 360 google street view of city Karachi with heighest GSV contribution in all over Pakistan it helped more than 42 Million people till now.`,
+        Fassal 360 is more than just a platform—it’s a movement to bridge the gap between traditional farming and modern technology. From soil health monitoring to weather forecasting and crop management, our platform offers a 360-degree approach to agriculture, ensuring farmers have everything they need at their fingertips.`,
         `
-        Coming back to Programming over the time I've delivered projects to many happy cients over globe and it gave me experience for working with many different people of different culture.
-        From local software house to Fiverr, Fiverr to Upwork and gradually towards international companies.`,
+        We take pride in serving a global community of farmers, agricultural experts, and agribusinesses. Our solutions have impacted millions by providing actionable insights, reducing resource waste, and fostering eco-friendly farming practices that benefit both the environment and the economy.`,
         `
-        I am extremely observant when it comes to the breakdown of certain things. As being a crafty person I mostly endup solving too complex issues in less time.
-        `,
+        At Fassal 360, we are committed to continuous innovation. Our team works tirelessly to develop tools that address the unique challenges faced by farmers, from unpredictable weather patterns to market fluctuations, ensuring they stay ahead in a rapidly evolving industry.`,
         `
-        To test my skills to the fullest would be an amazing experience, an environment where I would learn more and polish my skills more further would be an ideal one for me. Because I believe that there is always room to learn something new and to say no to a new opportunity would not be wise at all.
-        Feel free to communicate.`,
+        Join us on this journey to redefine agriculture. Whether you're a small-scale farmer or a large agribusiness, Fassal 360 is here to support you with state-of-the-art technology and a vision for a sustainable future. Let’s grow smarter, together.`,
         `
-        Over the time I've specialized in many technologies some of them are...
-        `,
+        Our platform leverages a variety of cutting-edge technologies to deliver seamless and efficient solutions for modern agriculture:`,
     ],
     techList1: [
-        'JavaScript/TypeScript',
-        'React.js/Native',
-        'Express.js',
-        'Node.js',
-        'Firestore',
-        'MongoDB'
+        'Crop Production',
+        'Horticulture (fruits, vegetables, flowers)',
+        'Animal Husbandry (raising livestock)',
+        'Dairy Farming',
+        'Poultry Farming',
+        'Aquaculture (fish farming)'
     ],
     techList2: [
-        'Web3.js',
-        'Solidity',
-        'Ionic',
-        'Cordova',
-        'PWA/SPA',
-        'AWS',
+        'Agroforestry (combining agriculture)',
+        'Soil Science',
+        'Agricultural Engineering',
+        'Organic Farming',
+        'Agri-Business Management',
+        'Precision Farming (tech-based farming)'
     ],
-    image: '/assets/profile.jpg',
+    image: '/assets/logoLightbg.png',
 }
 
-export default mySelf
+export default fassal360

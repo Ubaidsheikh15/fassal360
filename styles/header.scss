@@ -47,10 +47,10 @@
 
     .ai-logo-bg {
       display: flex;
-      background: $themeColor4;
-      border-radius: 50%;
-      overflow: hidden;
+      // background: $themeColor4;
+      // border-radius: 50%;
       // border: 2px solid $themeColor3;
+      width: fit-content;
     }
   }
 

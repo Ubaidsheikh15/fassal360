@@ -13,12 +13,12 @@ const header = {
         { title: 'Contact', id: 'contact' },
     ],
     rightBtn: {
-        label: 'Curriculum Vitae | CV',
-        onClick: () => openLink('assets/cv.pdf')
+        label: 'Download App',
+        onClick: () => openLink('')
     },
     logo: {
-        src: '/assets/profile.jpg',
-        alt: 'afzalimdad9'
+        src: '/assets/logoLightbg.png',
+        alt: ''
     },
     handleIconClick: () => scrollTo('home'),
     handleItemSelect: (menu) => scrollTo(menu.id),
