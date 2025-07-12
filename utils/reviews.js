@@ -2,7 +2,7 @@ const reviews = {
     heading:  `Some Reviews`,
     list: [
         {
-            clinet: 'Adrian',
+            clinet: '',
             via: 'Fiverr',
             reivew: 'Flawless delivery!',
         },

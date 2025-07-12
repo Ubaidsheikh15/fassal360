@@ -65,10 +65,10 @@ export default function Home() {
         {/* <ViewElement id="my-work">
           <Projects data={projects} />
         </ViewElement> */}
-        {/* 
+        
         <ViewElement id="reviews">
           <Reviews data={reviews} />
-        </ViewElement> */}
+        </ViewElement>
         {/* 
         <ViewElement id="certifications">
           <Certifications data={certifications} />
