@@ -4,6 +4,7 @@ import styles from './EmailPopup.module.css';
 export default function EmailPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState('');
+  const [isInputFocused, setIsInputFocused] = useState(false);
   const totalSlots = 1000;
   const availableSlots = 750;
   const popupRef = useRef(null);
@@ -28,13 +29,19 @@ export default function EmailPopup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Submitted email:', email); // Replace with your submission logic
+    console.log('Submitted email:', email);
     setEmail('');
     setIsOpen(false);
   };
 
   return (
     <div className={styles.container}>
+      {/* Tooltip */}
+      <div className={`${styles.tooltip} ${isOpen || isInputFocused ? styles.tooltipHidden : styles.tooltipVisible}`}>
+        <span>Join now! Only {availableSlots} slots left!</span>
+        <div className={styles.tooltipArrow} />
+      </div>
+
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -70,6 +77,8 @@ export default function EmailPopup() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              onFocus={() => setIsInputFocused(true)}
+              onBlur={() => setIsInputFocused(false)}
               placeholder="Enter your email"
               className={styles.input}
               required

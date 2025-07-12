@@ -26,7 +26,7 @@ export const darkPalettes = [
 const litePalettes = [
   {
     layer1: '#ffffff',  // Main background
-    layer2: '#f1f1f1',  // Container / cards
+    layer2: '#ccf795ff',  // Container / cards
     layer3: '#2b2b2b',  // Main text
     layer4: '#88c932',  // Accent (buttons/headings)
   },
