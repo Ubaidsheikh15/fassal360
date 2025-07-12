@@ -15,11 +15,10 @@ const Outer = ({
 
   const handleCloseDialog = () => {
     setIsDialogOpen(false);
-    setEmail(""); // Reset email input on close
+    setEmail("");
   };
 
   const handleEmailSubmit = () => {
-    // Placeholder for email submission logic
     console.log("Email submitted:", email);
     handleCloseDialog();
   };
@@ -29,21 +28,34 @@ const Outer = ({
       className="ai-outer"
       style={{ position: "relative", overflow: "hidden" }}
     >
+      {/* Inline global styles for animations */}
+      <style jsx global>{`
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.08);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      `}</style>
+
       <div className="container">
         <div className="ai-outer-container d-flex justify-content-between align-items-center">
           <div className="ai-outer-text">
-            <div
-              className="ai-outer-heading"
-       
-            >
-              {title1}
-            </div>
-            <div
-              className="ai-outer-heading"
-
-            >
-              {title2}
-            </div>
+            <div className="ai-outer-heading">{title1}</div>
+            <div className="ai-outer-heading">{title2}</div>
             <div className="ai-outer-heading2">
               <DecryptText values={decrypTexts} />
             </div>
@@ -54,7 +66,6 @@ const Outer = ({
               {desciption}
             </div>
             <div className="ai-outer-contact">
-            
               <button
                 onClick={handleOpenDialog}
                 className="ai-button"
@@ -94,7 +105,6 @@ const Outer = ({
         </div>
       </div>
 
-      {/* Dialog Box with enhanced greedy text and email input */}
       {isDialogOpen && (
         <div
           style={{
@@ -190,7 +200,6 @@ const Outer = ({
                 onFocus={(e) => (e.target.style.borderColor = "#a8e050")}
                 onBlur={(e) => (e.target.style.borderColor = "#88c932")}
               />
-           
             </div>
             <div
               style={{
@@ -256,23 +265,6 @@ const Outer = ({
     </div>
   );
 };
-
-// Inline CSS for animations
-const styles = `
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-`;
-
-const styleSheet = document.createElement("style");
-styleSheet.innerText = styles;
-document.head.appendChild(styleSheet);
 
 Outer.propTypes = {
   data: PropTypes.shape({
