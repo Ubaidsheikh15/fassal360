@@ -5,7 +5,7 @@ const header = {
     { title: "Home", id: "home" },
     { title: "Empowering", id: "my-self" },
     { title: "Initiatives", id: "experience" },
-    { title: "", id: "" },
+    { title: "Wisdom", id: "reviews" },
     { title: "", id: "" },
     { title: "", id: "" },
     { title: "", id: "" },

@@ -65,12 +65,12 @@ export default function Home() {
         {/* <ViewElement id="my-work">
           <Projects data={projects} />
         </ViewElement> */}
-        {/* 
+        
         <ViewElement id="reviews">
           <Reviews data={reviews} />
-        </ViewElement> */}
-        {/* 
-        <ViewElement id="certifications">
+        </ViewElement>
+        
+        {/* <ViewElement id="certifications">
           <Certifications data={certifications} />
         </ViewElement> */}
 
@@ -86,7 +86,7 @@ export default function Home() {
           <Contact data={contact} />
         </ViewElement> */}
 
-        <WaterMark />
+        {/* <WaterMark /> */}
         <EmailPopup />
       </ParallaxProvider>
     </>
