@@ -1,0 +1,242 @@
+@import "./theme.scss";
+
+.ai-hero {
+  width: 100vw;
+  min-height: 100vh;
+
+  .ai-hero-top-background {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    background-image: url("/assets/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    mix-blend-mode: multiply;
+  }
+  .ai-hero-top-background::after {
+    width: 100%;
+    content: "";
+    height: 100%;
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .ai-hero-container {
+    max-width: 1000px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0;
+    position: relative;
+
+    .ai-hero-item {
+      opacity: 1; /* Ensure visibility by default */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+      &[data-aos="fade-up"] {
+        opacity: 0; /* Hidden initially for AOS animation */
+        transform: translateY(20px);
+      }
+
+      &.aos-animate {
+        opacity: 1; /* Visible when AOS triggers */
+        transform: translateY(0);
+      }
+
+      .ai-item-body {
+        background-color: $themeColor2;
+        width: 100%;
+        border-radius: $defaultBorder;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: $allTransitoin3s;
+
+        .ai-item-title {
+          margin: 0;
+          font-size: clamp(24px, 5vw, 28px);
+          font-weight: 700;
+          line-height: 1.2;
+          color: $themeColor4;
+          text-align: center;
+          animation: slideIn 0.5s ease-in-out;
+        }
+
+        .ai-hero-cta {
+          margin: 30px 0 0;
+          font-size: clamp(18px, 3.7vw, 21px);
+          font-weight: 600;
+          line-height: 1.2;
+          color: $themeColor4;
+          background-color: $themeColor2;
+          border: 2px solid $themeColor4;
+          border-radius: $defaultBorder;
+          padding: 12px 24px;
+          cursor: pointer;
+          transition: $allTransitoin3s;
+          animation: slideIn 0.5s ease-in-out;
+
+          &:hover {
+            background-color: $themeColor3;
+            color: #fff;
+          }
+        }
+
+        &:hover {
+          .ai-item-title {
+            color: $themeColor3;
+          }
+        }
+      }
+    }
+  }
+
+  .ai-hero-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 500;
+    animation: slideIn 0.5s ease-in-out;
+  }
+
+  .ai-hero-modal {
+    background-color: $themeColor2;
+    width: 90%;
+    max-width: 450px;
+    border-radius: $defaultBorder;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ai-item-title {
+      margin: 0;
+      font-size: clamp(24px, 5vw, 28px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: $themeColor4;
+      text-align: center;
+    }
+
+    .ai-item-platform {
+      margin: 15px 0 0;
+      font-size: clamp(18px, 3.7vw, 21px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: #ff4444; /* Red for urgency */
+      text-align: center;
+    }
+
+    .ai-item-description {
+      margin: 15px 0 0;
+      font-size: clamp(12px, 2.5vw, 14px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: $themeColor4;
+      text-align: center;
+    }
+
+    .ai-hero-modal-input {
+      width: 100%;
+      margin: 15px 0 0;
+      padding: 12px;
+      border: 2px solid $themeColor2;
+      border-radius: $defaultBorder;
+      font-size: clamp(12px, 2.5vw, 14px);
+      color: $themeColor4;
+      background: #fff;
+      outline: none;
+      transition: $allTransitoin3s;
+
+      &:focus {
+        border-color: $themeColor3;
+      }
+    }
+
+    .ai-hero-modal-buttons {
+      margin: 15px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .ai-hero-modal-cancel {
+      background: #ffffff;
+      color: $themeColor2;
+      padding: 12px 24px;
+      border: 2px solid $themeColor2;
+      border-radius: $defaultBorder;
+      font-size: clamp(12px, 2.5vw, 14px);
+      font-weight: 600;
+      cursor: pointer;
+      transition: $allTransitoin3s;
+
+      &:hover {
+        background: $themeColor3;
+        color: #fff;
+      }
+    }
+
+    .ai-hero-modal-submit {
+      background: $themeColor2;
+      color: $themeColor4;
+      padding: 12px 24px;
+      border: none;
+      border-radius: $defaultBorder;
+      font-size: clamp(12px, 2.5vw, 14px);
+      font-weight: 600;
+      cursor: pointer;
+      transition: $allTransitoin3s;
+
+      &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        background: $themeColor3;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ai-hover-color {
+  position: relative;
+
+  &:hover {
+    .ai-hero-top-background {
+      filter: grayscale(0);
+      mix-blend-mode: normal;
+      transition: $allTransitoin3s;
+    }
+  }
+}

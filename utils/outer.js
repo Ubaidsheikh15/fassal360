@@ -11,7 +11,7 @@ const outer = {
     "Bridging Tech and Farming",
     "Harvesting Solutions for Tomorrow",
   ],
-  desciption: `Fassal 360 is an innovative platform empowering farmers with cutting-edge web solutions, driving sustainable agriculture and prosperity through technology.`,
+  desciption: `Fasal 360 is an innovative platform empowering farmers with cutting-edge web solutions, driving sustainable agriculture and prosperity through technology.`,
   button: {
     label: "Hurry up, Join now !",
     onClick: () => openLink("mailto:afzalimdad9@gmail.com?subject=Hello"),

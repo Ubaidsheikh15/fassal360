@@ -25,9 +25,16 @@ import sideElements from "../utils/sideElements";
 import Cursor from "../components/Cursor";
 import PreLoader from "../components/PreLoader";
 import Certifications from "../views/Certifications";
-import certifications from "../utils/certifications";
+import { certifications } from "../views/Certifications"; // Import certifications data
 import WaterMark from "../components/WaterMark";
 import EmailPopup from "../utils/EmailPopup";
+import Offer from "../views/Offer";
+import { offerData } from "../views/Offer";
+import FAQ from "../views/FAQ";
+import { faqData } from "../views/FAQ";
+import Hero from "../views/Hero";
+import { heroData } from "../views/Hero";
+import Footer from "../views/Footer";
 
 const ViewElement = ({ children, id }) => (
   <div id={id} className="view-element">
@@ -53,14 +60,20 @@ export default function Home() {
         <ViewElement id="home">
           <Outer data={outer} />
         </ViewElement>
-        <ViewElement id="my-self">
-          <MySelf data={mySelf} />
-        </ViewElement>
-        {/* <ViewElement id="experience">
-          <Works data={works} />
-        </ViewElement> */}
-        <ViewElement id="reviews">
-          <Reviews data={reviews} />
+        <ViewElement id="certifications">
+          <Certifications data={certifications} />
+        </ViewElement>{" "}
+        <ViewElement id="offer">
+          <Offer data={offerData} />
+        </ViewElement>{" "}
+        <ViewElement id="faq">
+          <FAQ data={faqData} />
+        </ViewElement>{" "}
+        <ViewElement id="vip">
+          <Hero data={heroData} />
+        </ViewElement>{" "}
+        <ViewElement id="footer">
+          <Footer />
         </ViewElement>
         <EmailPopup />
       </ParallaxProvider>

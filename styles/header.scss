@@ -46,14 +46,13 @@
     }
 
     .ai-logo-bg {
-      display: flex;
-      // background: $themeColor4;
-      // border-radius: 50%;
-      // border: 2px solid $themeColor3;
-      width: fit-content;
+      width: 5rem;
+      height: fit-content;
     }
     .ai-logo-bg img {
-     width: 100px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 

@@ -1,0 +1,144 @@
+@import "./theme.scss";
+
+.ai-faq {
+  width: 100vw;
+  min-height: 100vh;
+
+  .ai-faq-top-background {
+    height: 400px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+  }
+
+  .ai-faq-container {
+    max-width: 1000px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0;
+    position: relative;
+
+    .ai-faq-item {
+      opacity: 1; /* Ensure visibility by default */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+      &[data-aos="fade-up"] {
+        opacity: 0; /* Hidden initially for AOS animation */
+        transform: translateY(20px);
+      }
+
+      &.aos-animate {
+        opacity: 1; /* Visible when AOS triggers */
+        transform: translateY(0);
+      }
+
+      .ai-faq-item-body {
+        background-color: $themeColor2;
+        width: 100%;
+        border-radius: $defaultBorder;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &.size-2 {
+          flex-direction: row;
+          align-items: center;
+        }
+
+        &.open {
+          transform: scale(1.02);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .ai-faq-header {
+          display: flex;
+          align-items: center;
+          padding: 16px;
+          border-radius: $defaultBorder;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: rgba($themeColor3, 0.1);
+          }
+        }
+
+        .ai-item-question {
+          margin: 0;
+          font-size: clamp(18px, 5vw, 20px);
+          font-weight: 700;
+          line-height: 1.2;
+          color: $themeColor4;
+
+          .size-2 & {
+            margin: 0;
+          }
+        }
+
+        .ai-item-platform {
+          margin: 10px 0 0;
+          font-size: clamp(18px, 3.7vw, 21px);
+          font-weight: 600;
+          line-height: 1.2;
+          color: $themeColor4;
+        }
+
+        .ai-faq-toggle {
+          font-size: 24px;
+          font-weight: 700;
+          color: $themeColor4;
+          padding: 0 16px;
+          transition: transform 0.3s ease;
+
+          &.rotate {
+            transform: rotate(90deg);
+          }
+        }
+
+        .ai-faq-description {
+          max-height: 0;
+          overflow: hidden;
+          padding: 0 16px;
+          opacity: 1; /* Ensure visibility in both states */
+          transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+
+          &.open {
+            max-height: 500px; /* Increased to accommodate longer content */
+            padding: 16px;
+            opacity: 1 !important; /* Ensure description stays visible */
+          }
+
+          &.closed {
+            max-height: 0;
+            padding: 0 16px;
+          }
+
+          .ai-item-description {
+            font-size: clamp(12px, 2.5vw, 14px);
+            font-weight: 600;
+            line-height: 1.5;
+            color: $themeColor4;
+          }
+        }
+
+        &:hover {
+          .ai-item-question {
+            color: $themeColor3;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

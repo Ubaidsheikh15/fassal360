@@ -26,6 +26,9 @@ import '/styles/cursor.scss'
 import '/styles/afzalimdad.scss'
 import '/styles/pre-loader.scss'
 import '/styles/certifications.scss'
+import '/styles/faq.scss'
+import '/styles/hero.scss'
+import '/styles/Footer.scss'
 
 
 function MyApp({ Component, pageProps }) {

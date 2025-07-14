@@ -6,7 +6,6 @@
 
   .ai-certifications-top-background {
     height: 400px;
-    background-color: $themeColor3;
     width: 100vw;
     position: absolute;
     left: 0;
@@ -19,54 +18,60 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 100px 0 100px 0;
+    padding: 100px 0;
     position: relative;
 
-    .ai-certifications-item {
-      .ai-item-body {
+    .ai-certifications-item,
+    .ai-offer-slider {
+      .ai-item-body,
+      .ai-offer-item-body {
         background-color: $themeColor2;
         width: 100%;
         border-radius: $defaultBorder;
-
-        display: flex;
         height: 100%;
+        display: flex;
         flex-direction: column;
+
+        &.size-2 {
+          flex-direction: row;
+          align-items: center;
+        }
 
         .ai-item-head {
           display: flex;
           justify-content: space-between;
+        }
 
-          .ai-item-logo {
-            width: 50px;
-            height: 50px;
-            background-position: center;
-            background-size: contain;
-            border-radius: $defaultBorder;
-          }
-
-          svg {
-            stroke: $themeColor4;
-          }
+        .ai-item-logo {
+          width: 100px;
+          height: fit-content;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .ai-item-title {
-          margin: 30px 0px 0px;
+          margin: 30px 0 0;
           font-size: clamp(24px, 5vw, 28px);
           font-weight: 700;
           line-height: 1.2;
           color: $themeColor4;
+
+          .size-2 & {
+            margin: 0;
+          }
         }
 
         .ai-item-platform {
-          margin: 15px 0px 0px;
+          margin: 15px 0 0;
           font-size: clamp(18px, 3.7vw, 21px);
           font-weight: 600;
           line-height: 1.2;
           color: $themeColor4;
         }
 
-        .ai-item-date {
-          margin: 30px 0px 0px;
+        .ai-item-description {
+          margin: 30px 0 0;
           font-size: clamp(12px, 2.5vw, 14px);
           font-weight: 600;
           line-height: 1.2;
@@ -77,13 +82,97 @@
           .ai-item-title {
             color: $themeColor3;
           }
+        }
+      }
+    }
 
-          .ai-item-head {
-            svg {
-              stroke: $themeColor3;
-            }
+    .ai-offer-slider {
+      .slick-track {
+        display: flex;
+        align-items: stretch;
+      }
+
+      .slick-slide {
+        padding: 0 8px;
+        margin: 0 8px;
+        border-radius: 1rem;
+        display: flex !important;
+        justify-content: center;
+        height: auto;
+        opacity: 1; /* Ensure slides are visible by default */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+        &[data-aos="fade-up"] {
+          opacity: 0; /* Hidden initially for AOS animation */
+          transform: translateY(20px); /* Initial position for slide-in */
+        }
+
+        &.aos-animate {
+          opacity: 1; /* Fully visible when in view */
+          transform: translateY(0);
+        }
+      }
+
+      .slick-slide > div {
+        display: flex;
+        height: 100%;
+      }
+
+      .ai-offer-item-body {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .slick-dots {
+        display: flex !important;
+        justify-content: center;
+        margin-top: 20px;
+
+        li {
+          margin: 0 5px;
+
+          button:before {
+            font-size: 12px;
+            color: $themeColor4;
+            opacity: 0.5;
+          }
+
+          &.slick-active button:before {
+            color: $themeColor3;
+            opacity: 1;
           }
         }
+      }
+
+      .slick-prev,
+      .slick-next {
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+
+        &:before {
+          font-size: 30px;
+          color: $themeColor4;
+        }
+      }
+
+      .slick-prev {
+        left: -50px;
+      }
+
+      .slick-next {
+        right: -50px;
       }
     }
 
@@ -94,9 +183,9 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: bottom;
-
       filter: grayscale(1);
       mix-blend-mode: multiply;
+      min-height: 200px;
     }
   }
 }
