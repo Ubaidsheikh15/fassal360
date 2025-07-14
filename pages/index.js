@@ -35,58 +35,33 @@ const ViewElement = ({ children, id }) => (
   </div>
 );
 
+export async function getStaticProps() {
+  return {
+    props: {}, // Add static data here if needed
+  };
+}
+
 export default function Home() {
   return (
     <>
-      {/* <PreLoader /> */}
-
       <Cursor />
       <ParallaxProvider>
         <TopScrolledBar />
-
         <FullPageScroll />
-
         <Header data={header} />
-
         <SideElements data={sideElements} />
-
         <ViewElement id="home">
           <Outer data={outer} />
         </ViewElement>
-
         <ViewElement id="my-self">
           <MySelf data={mySelf} />
         </ViewElement>
-
-        <ViewElement id="experience">
+        {/* <ViewElement id="experience">
           <Works data={works} />
-        </ViewElement>
-
-        {/* <ViewElement id="my-work">
-          <Projects data={projects} />
         </ViewElement> */}
-        
         <ViewElement id="reviews">
           <Reviews data={reviews} />
         </ViewElement>
-        {/* 
-        <ViewElement id="certifications">
-          <Certifications data={certifications} />
-        </ViewElement> */}
-
-        {/* <ViewElement id="graphics">
-          <Graphics data={graphics} />
-        </ViewElement> */}
-
-        {/* <ViewElement id="contributions">
-          <MapsContribution data={mapsContribution} />
-        </ViewElement> */}
-
-        {/* <ViewElement id="contact">
-          <Contact data={contact} />
-        </ViewElement> */}
-
-        <WaterMark />
         <EmailPopup />
       </ParallaxProvider>
     </>

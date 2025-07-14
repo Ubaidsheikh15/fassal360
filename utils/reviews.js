@@ -1,57 +1,126 @@
 const reviews = {
-    heading:  `Some Reviews`,
-    list: [
-        {
-            clinet: '',
-            via: 'Fiverr',
-            reivew: 'Flawless delivery!',
-        },
-        {
-            clinet: 'Tom',
-            via: 'Fiverr',
-            reivew: 'Afzal is a great product leader and developer. He helped me accelerate my development by collaborating with many engineers and helped me build my app. I look forward to working with Afzal again',
-        },
-        {
-            clinet: 'Ahmed',
-            via: 'Fiverr',
-            reivew: 'This guy is awesome! He works hard and always with the best quality. He did great on our project. I highly recommend him!',
-        },
-        {
-            clinet: 'Jawad',
-            via: 'Fiverr',
-            reivew: 'The freelancer is absolutely expert, he done what I need with perfec skills. I’m going to work with him again. Thank you',
-        },
-        {
-            clinet: 'Javier',
-            via: 'Freelancer',
-            reivew: 'I’m glad working with him, definitely you won’t regret it. Amazing job',
-        },
-        {
-            clinet: 'Angelena',
-            via: 'Upwork',
-            reivew: 'Great guy. Works hard and delivers quality.',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiverr',
-            reivew: 'Another top shelf delivery from Afzal. Happy again, as expected.',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiverr',
-            reivew: '10/10, would definitely recommend this dude for all your app programming needs.',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiverr',
-            reivew: 'I can tell soon its really done ...but till now i think its really good',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiverr',
-            reivew: 'very helpful, and works hard to make sure things are done. Good developer.',
-        },
-    ]
-}
+  heading: `Cultivating Wisdom`,
+  list: [
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Agriculture is the greatest and fundamentally the most important of our industries. The cities are but the branches of the tree of national life, the roots of which go deeply into the land. We all flourish or decline with the farmer",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth, good morals, and happiness.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "If agriculture goes wrong, nothing else will have a chance to go right in the country.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Agriculture not only gives riches to a nation, but the only riches she can call her own.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "No race can prosper till it learns there is as much dignity in tilling a field as in writing a poem.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Agriculture is the most healthful, most useful, and most noble employment of man.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "The discovery of agriculture was the first big step toward a civilized life.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Agriculture, manufactures, commerce, and navigation, the four pillars of our prosperity, are the most thriving when left most free to individual enterprise.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew: "Farming is a profession of hope.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "The farmer is the only man who does not depend on others for his living; he stands on his own soil and under his own sky.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Agriculture is the foundation of civilization and any stable economy.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "The plow is the instrument which separates civilization from savagery; and the farmer is its wielder.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Farming is not just a job; it’s a way of life that feeds the world and nurtures the soul.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "The strength of a nation lies in the soil, and the farmer is its steward.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Agriculture is the art and science of cultivating the soil, growing crops, and raising livestock; it is the backbone of human survival.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "To cultivate the earth is to collaborate with nature in the act of creation.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "The farmer’s work is the root of all progress, for without food, no other industry can thrive.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "Agriculture is the silent force that sustains humanity, binding us to the earth and its rhythms.",
+    },
+    {
+      clinet: "",
+      via: "",
+      reivew:
+        "A nation that honors its farmers honors its future, for they sow the seeds of prosperity.",
+    },
+  ],
+};
 
-export default reviews
+export default reviews;

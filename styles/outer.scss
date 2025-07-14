@@ -7,6 +7,7 @@
     .ai-outer-text {
       position: absolute;
       z-index: 1;
+      top: 80px;
 
       .ai-outer-my-name {
         margin: 0px 0px 30px 4px;
@@ -14,6 +15,7 @@
         font-size: clamp(14px, 5vw, 16px);
         font-weight: 600;
         line-height: 1;
+        margin-top: 40px;
       }
 
       .ai-outer-heading {
@@ -21,6 +23,7 @@
         font-weight: 700;
         color: $themeColor3;
         line-height: 1;
+
       }
 
       .ai-outer-heading2 {

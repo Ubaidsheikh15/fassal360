@@ -4,8 +4,8 @@ const header = {
   menus: [
     { title: "Home", id: "home" },
     { title: "Empowering", id: "my-self" },
-    { title: "Initiatives", id: "experience" },
-    { title: "", id: "" },
+    // { title: "Initiatives", id: "experience" },
+    { title: "Wisdom", id: "reviews" },
     { title: "", id: "" },
     { title: "", id: "" },
     { title: "", id: "" },

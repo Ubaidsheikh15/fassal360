@@ -1,10 +1,11 @@
+"use client";
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 import { getMessaging, getToken } from "firebase/messaging";
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { getAnalytics } from "firebase/analytics";
+
 const firebaseConfig = {
   apiKey: "AIzaSyArM3ZnRKLIbPkne4U7_h9RNzDwBAkfOCs",
   authDomain: "fassal360.firebaseapp.com",
@@ -15,12 +16,19 @@ const firebaseConfig = {
   measurementId: "G-2H31GLHGBD"
 };
 
-
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const firestore = getFirestore(app);
+
+// Initialize browser-dependent services only in the client
+let analytics = null;
+let messaging = null;
+
+if (typeof window !== "undefined") {
+  analytics = getAnalytics(app);
+  messaging = getMessaging(app);
+}
+
+const db = getFirestore(app);
 const storage = getStorage(app);
 const auth = getAuth(app);
-const messaging = getMessaging(app);
 
-export { app, analytics, firestore, storage, auth, messaging, getToken };
+export { app, analytics, db, storage, auth, messaging, getToken };
