@@ -9,6 +9,20 @@ import "aos/dist/aos.css";
 const offerData = {
   offerHeading: "What We Offer",
   offerList: [
+     {
+      size: 1,
+      title: "Buy & Sell",
+      date: "A trusted marketplace for farmers to easily buy or sell crops, equipment, and agri-products directly.",
+      image: "/assets/buy.png",
+      aos: "fade-up",
+    },
+    {
+      size: 1,
+      title: "Bidding",
+      date: "Participate in live auctions to get competitive prices for your farm produce or purchase quality goods at your rate.",
+      image: "/assets/bid.png",
+      aos: "fade-up",
+    },
     {
       size: 1,
       title: "Daily Agri News",
@@ -37,20 +51,7 @@ const offerData = {
       image: "/assets/pic4.png",
       aos: "fade-up",
     },
-    {
-      size: 1,
-      title: "Buy & Sell",
-      date: "A trusted marketplace for farmers to easily buy or sell crops, equipment, and agri-products directly.",
-      image: "/assets/buy.png",
-      aos: "fade-up",
-    },
-    {
-      size: 1,
-      title: "Bidding",
-      date: "Participate in live auctions to get competitive prices for your farm produce or purchase quality goods at your rate.",
-      image: "/assets/bid.png",
-      aos: "fade-up",
-    },
+   
   ],
 };
 
